@@ -1,37 +1,40 @@
 class Esfera:
-    def __init__(self, radio):
-        self.__nombre = "Esfera"      #nombre predeterminado por el nombre de la clase #puse en privado con __
-        self.radio = radio          #def la radio porque puede variar
-    pass
+    def __init__(self, nombre, radio):
+        self.nombre = nombre
+        self.radio = radio
+
+    def devolver_nombre_esfera (self): #para definir un metodo es como una fx y se pone entre () self
+        print("Nombre de la esfera es: ", self.nombre)
+
+    def devolver_radio (self):
+        print("La radio de la esfera es: ", self.radio)
 
 class Cubo:
-    def __init__(self, lado):
-        self.nombre = "Cubo"
+    def __init__(self, nombre, lado):
+        self.nombre = nombre
         self.lado = lado
-    pass
 
-class PrismaRectangular:
-    def __init__(self, base, altura, profundidad):
-        self.nombre = "PrismaRectangular"
+    def devolver_nombre_cubo(self):
+        print("El nombre del Cubo es: ", self.nombre)
+
+    def devolver_radio(self):
+        print("El lado de la esfera es: ", self.lado)
+
+
+class Prisma_rectangular:
+    def __init__(self, nombre, base, altura, profundidad):
+        self.nombre = nombre
         self.base = base
         self.altura = altura
-        self.profundidad = profundidad
-    pass
+        self.profundad = profundidad
 
-print(Cubo(4).lado)
+    def devolver_nombre_prisma(self):
+        print("El nombre del Prisma Rectangular es: ", self.nombre)
 
-#Médicos
-[{"user_id":'raquel','password':'supersec456'},
-{"user_id":'irma','password':'supersec789',},
-{"user_id":'pablo','password':'supersec012'},
-{"user_id":'pedro','password':'supersec345'},
-{"user_id":'juan','password':'supersec678'},
-{"user_id":'alfredo','password':'supersec901'}]
+    def devolver_atributos(self):
+        print("Los atributos del Prisma Rectangular son: ", self.base, ", ", self.profundad, ", ", self.altura)
 
-#Pacientes
-{"user_id":'sofia','password':'supersec46'},
-{"user_id":'manuel','password':'supersec79',},
-{"user_id":'tobias','password':'supersec02'},
-{"user_id":'laura','password':'supersec35'},
-{"user_id":'florencia','password':'supersec68'},
-{"user_id":'santiago','password':'supersec91'}
+esfera1 = Esfera("pepe", 3)                 #Yo creo mi esfera en una var con mi nombre y radio que son los atrib
+print(esfera1.devolver_nombre_esfera())     #le pido que me devuelva con la fx el nombre de la esfera
+
+
